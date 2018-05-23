@@ -1,0 +1,37 @@
+<scroll-view scroll-y class="starbucks-container">
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="1000" circular="true">
+    <block wx:for="{{picture}}" wx:for-index="index" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item.url}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <button class="starbucks-btn">
+    <image class="newImage" src="{{newImage}}" />
+    <text>{{newTitle}}</text>
+  </button>
+  <text class="title">咖啡+祝福 即刻表心意</text>
+  
+  <scroll-view class="sbList">
+    <view class="starbucks-list" wx:for="{{List}}" wx:key="{{item.id}}">
+      <image src="{{item.img}}" />
+      <text>{{item.title}}</text>
+    </view>
+
+  </scroll-view>
+
+  <view class="starbucks-foot">
+    <view class="cole-img">
+      <navigator url="/pages/logs/logs">
+        <image src="{{bzimg}}" />
+      </navigator>
+    </view>
+    <view class="text">
+      <navigator class="nav" url="/pages/logs/logs">
+        <text>购买历史</text>
+      </navigator>
+    </view>
+  </view>
+
+
+</scroll-view>

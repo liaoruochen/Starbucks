@@ -1,0 +1,138 @@
+/**index.wxss**/
+
+.swiper{
+  width: 100%;
+  height: 500rpx;
+}
+
+.swiper .slide-image{
+  width: 100%;
+  /* background-repeat: no-repeat; */
+}
+
+.starbucks-btn{
+ 
+  /* outline: none; */
+  appearance: none;
+  width: 365rpx;
+  height: 100rpx;
+  border: 0;
+  border-radius: 50rpx;
+  /* line-height: 100rpx; */
+  -webkit-box-shadow:0px 0px 10px #e0e0e0;
+  box-shadow:0px 0px 10px #e0e0e0;
+  background-color: #fff;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button::after{
+  border: none;
+}
+
+.starbucks-btn .newImage{
+  width: 54rpx;
+  height: 39rpx;
+
+}
+.starbucks-btn text{
+  flex: 1;
+  color: #239064;
+  font-size: 26rpx;
+  letter-spacing: 4rpx;
+}
+
+.title{
+  font-size: 30rpx;
+  padding-left: 40rpx;
+  letter-spacing: 4rpx;
+}
+
+.sbList{
+ 
+  margin-top: 22rpx;
+  background-color: #f9f9f9;
+
+}
+.starbucks-list{
+  height: 253rpx;
+  width: 316rpx;
+  background-color: #fff;
+  margin-bottom: 60rpx;
+  border-radius: 15rpx;
+  -webkit-box-shadow:0px 2px 8px #858585; 
+  box-shadow:0px 2px 8px #858585;
+  
+}
+.starbucks-list:nth-child(n){
+  float: left;
+  margin-left: 40rpx;
+}
+.starbucks-list:nth-child(2n){
+  float: right;
+  margin-left: 0;
+  margin-right: 40rpx;
+}
+
+.starbucks-list image{
+  width: 315rpx;
+  height: 189rpx;
+  border-radius: 15rpx;
+}
+
+.starbucks-list text{
+  font-size: 23rpx;
+  text-align: center;
+  display: block;
+  margin: 7rpx auto;
+  letter-spacing: 5rpx;
+}
+
+.starbucks-foot{
+  background-color: #f9f9f9;
+  margin-bottom: 60rpx;
+  height: 185rpx;
+  width: 100%;
+
+ 
+}
+.starbucks-foot .cole-img{
+  position: relative;
+  background-color: #fff;
+  width: 87rpx;
+  height: 87rpx;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  -webkit-box-shadow:0px 0px 5px #858585; 
+  box-shadow:0px 0px 5px #858585;
+}
+
+.starbucks-foot image{
+  position: absolute;
+  left: 4rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+
+.starbucks-foot .text{
+  width: 100rpx;
+  height: 60rpx;
+  text-align: center;
+  display: block;
+  margin:0 auto;
+  margin-top: 10rpx;
+}
+
+.starbucks-foot text{
+  font-size: 23rpx;
+
+  color: #299e6d;
+  text-decoration: underline;
+
+}
+
