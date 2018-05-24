@@ -1,0 +1,41 @@
+<scroll-view scroll-y class="starbucks-container">
+    <view class="title-pic">
+        <image src="{{titlePic}}" />
+    </view>
+    <scroll-view scroll-x="true" class="list-pic">
+        <view class="picture" wx:for="{{listPic}}" wx:key="{{index}}">
+            <image class="{{id==item.id?'check':''}}" data-id="{{item.id}}" data-url="{{item.url}}" src="{{item.url}}" bindtap="showChoose"
+            />
+            <image wx:if="{{id==item.id}}" class="goupic" data-id="{{item.id}}" src="{{goupic}}" />
+        </view>
+    </scroll-view>
+
+
+    <text class="choice">选择商品</text>
+
+    <scroll-view class="starbucks-list" wx:for="{{starbucksList}}" wx:key="{{index}}">
+        <image class="drinkImg" src="{{item.url}}" />
+        <text class="description">{{item.name}}</text>
+        <text class="price">￥{{item.price}}</text>
+        <image class="addNum" src="{{addNum}}" />
+        <image class="delNum" src="{{delNum}}"/>
+        <text class="lisrNum">0</text>
+    </scroll-view>
+
+    <view class="starbucks-foot">
+        <text class="number">0份礼品</text>
+        <text class="money">￥0.00</text>
+        <button class="buy">购买</button>
+    </view>
+
+    <view class="makeknow">
+        <navigator url="../../pages/make/make">
+            <text class="make">使用须知</text>
+        </navigator>
+
+        <navigator url="../../pages/know/know">
+            <text class="know">隐私权条款</text>
+        </navigator>
+    </view>
+    <view class="dianzi"></view>
+</scroll-view>
