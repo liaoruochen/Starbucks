@@ -11,27 +11,24 @@
     <text>{{newTitle}}</text>
   </button>
   <text class="title">咖啡+祝福 即刻表心意</text>
-  
   <scroll-view class="sbList">
-    <view class="starbucks-list" wx:for="{{List}}" wx:key="{{item.id}}">
-      <image src="{{item.img}}" />
-      <text>{{item.title}}</text>
+    <view class="starbucks-list" wx:for="{{List}}" data-id="{{item.id}}" wx:key="{{item.id}}" bindtap="shoppingCart">
+      <navigator hover-class="none" url="../../pages/shopping/shopping">
+        <image src="{{item.img}}" />
+        <text>{{item.title}}</text>
+      </navigator>
     </view>
-
   </scroll-view>
-
   <view class="starbucks-foot">
     <view class="cole-img">
-      <navigator url="/pages/logs/logs">
+      <navigator hover-class="none" url="../../pages/history/history">
         <image src="{{bzimg}}" />
       </navigator>
     </view>
     <view class="text">
-      <navigator class="nav" url="/pages/logs/logs">
+      <navigator hover-class="none" class="nav" url="../../pages/history/history">
         <text>购买历史</text>
       </navigator>
     </view>
   </view>
-
-
 </scroll-view>

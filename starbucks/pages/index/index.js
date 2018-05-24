@@ -22,6 +22,14 @@ Page({
       {id:7,img:"/images/b.png",title:"生快"},
     ]
   }
+  ,
+  shoppingCart(e){
+    let id = e.currentTarget.dataset.id;
+    console.log(id)
+    // wx.navigateTo({
+    //   url: '../../pages/shopping/shopping'
+    // })
+  }
   //事件处理函数
  
 })

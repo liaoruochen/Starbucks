@@ -1,12 +1,16 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/history/history",
+    "pages/shopping/shopping",
+    "pages/make/make",
+    "pages/know/know"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "星巴克用心说",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }
