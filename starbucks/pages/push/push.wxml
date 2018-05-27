@@ -1,0 +1,54 @@
+<scroll-view scroll-y class="starbucks-container">
+    <view class="title-pic">
+        <image src="{{titlePic}}" />
+    </view>
+
+    <text class="chooseka">选择卡封面</text>
+
+    <scroll-view scroll-x="true" class="list-pic">
+        <view class="picture" wx:for="{{listPic}}" wx:key="{{index}}">
+            <image class="{{id==item.id?'check':''}}" data-id="{{item.id}}" data-url="{{item.url}}" src="{{item.url}}" bindtap="showChoose"
+            />
+            <image wx:if="{{id==item.id}}" class="goupic" data-id="{{item.id}}" src="{{goupic}}" />
+        </view>
+    </scroll-view>
+
+
+    <text class="choice">选择一份礼物</text>
+
+    <scroll-view class="starbucks-list" wx:for="{{starbucksList}}" wx:key="{{index}}">
+        <image class="drinkImg" src="{{item.url}}" />
+        <text class="description">{{item.name}}</text>
+        <text class="price">￥{{item.price}}</text>
+
+        <view class="addNum" bindtap="addNumber" data-index="{{index}}" data-status="{{item.status}}">
+            
+            <image wx:if="{{(item.status==status && item.num!=0)||item.num!=0}}" src="{{delNum1}}" />
+            <image wx:else="" src="{{addNum}}"/>
+        </view>
+        <view wx:if="{{item.status==status || item.num!=0 }}" data-index="{{index}}" class="delNum {{item.num==0?'out':''}}" bindtap="delNumber" data-status="{{item.status}}">
+            <image src="{{delNum}}" />
+        </view>
+
+        <text wx:if="{{item.status==status  || item.num!=0 }}" class="listNum {{item.num==0?'out':''}}">{{starbucksList[index].num}}</text>
+
+        <view wx:if="{{item.status==status  || item.num!=0 }}" class="xiabiao {{item.num==0?'out':''}}"></view>
+    </scroll-view>
+
+    <view class="starbucks-foot">
+        <text class="number">{{number}}份礼品</text>
+        <text class="money">￥{{money}}.00</text>
+        <button class="buy" disabled="{{disabled}}" bindtap="buySomething">购买</button>
+    </view>
+
+    <view class="makeknow">
+        <navigator hover-class="none" url="../../pages/make/make">
+            <text class="make">使用须知</text>
+        </navigator>
+
+        <navigator hover-class="none" url="../../pages/know/know">
+            <text class="know">隐私权条款</text>
+        </navigator>
+    </view>
+    <view class="dianzi"></view>
+</scroll-view>

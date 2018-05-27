@@ -1,0 +1,244 @@
+
+.starbucks-container{
+    /* background-color: red; */
+    width: 100%;
+    overflow: hidden;
+}
+.title-pic{
+    width: 100%;
+    height: 700rpx;
+    overflow: hidden;
+    margin: 0 auto;
+    /* margin-top: 40rpx; */
+    /* border-radius: 20rpx; */
+    /* -webkit-box-shadow:0px 0px 20px #9C9C9C;
+    box-shadow:0px 0px 20px #9C9C9C; */
+    
+}
+
+.title-pic image{
+    height: 700rpx;
+    width: 100%;
+    /* border-radius: 20rpx; */
+}
+
+
+.list-pic{
+    height: 160rpx;
+    width: 670rpx;
+    white-space: nowrap;
+    display: flex;
+    margin-left: 40rpx;
+    margin-top: 45rpx;
+  
+}
+
+.picture{
+    width: 230rpx;
+    height: 140rpx;
+    display: inline-block;
+    padding: 0 17rpx;
+    border-radius: 10rpx;
+   
+}
+.picture image{
+    width: 230rpx;
+    height: 140rpx;
+    border-radius: 10rpx;
+    
+}
+.picture .check{
+    border: 5rpx solid #1eb275;
+}
+
+.picture .goupic{
+    width: 35rpx;
+    height: 35rpx;
+    position: relative;
+    top: -114rpx;
+    left: -14rpx;
+}
+
+.chooseka{
+    font-size: 24rpx;
+    color: #494949;
+    display: block;
+    padding-left: 40rpx;
+    margin-top: 50rpx;
+}
+
+.choice{
+    font-size: 24rpx;
+    color: #494949;
+    display: block;
+    padding-left: 40rpx;
+    margin-top: 50rpx;
+}
+.starbucks-list{
+    
+    width: 650rpx;
+    height: 215rpx;
+    /* background-color: red; */
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50rpx;
+    overflow: hidden;
+}
+.starbucks-list::after{
+    content: '';
+    position: absolute;
+    width: 586rpx;
+    height: 2rpx;
+    background-color: #e1e1e1;
+    top: 175rpx;
+    left: 0rpx;
+}
+.starbucks-list .drinkImg{
+    width: 185rpx;
+    height: 155rpx;
+}
+
+.starbucks-list .description{
+    position: absolute;
+    top: 5rpx;
+    left: 220rpx;
+    font-size: 35rpx;
+}
+.starbucks-list .price{
+    position: absolute;
+    top: 70rpx;
+    left: 220rpx;
+    font-size: 30rpx;
+}
+.starbucks-list .addNum{
+    width: 38rpx;
+    height: 38rpx;
+    position: absolute;
+    top: 70rpx;
+    right:20rpx ;
+    border-radius: 50%;
+}
+.starbucks-list .addNum image{
+    width: 38rpx;
+    height: 38rpx;
+}
+.starbucks-list .delNum{
+    width: 38rpx;
+    height: 38rpx;
+    position: absolute;
+    top: 70rpx;
+    right:140rpx;
+    border-radius: 50%;
+}
+.starbucks-list .delNum.out{
+    display: none;
+}
+
+
+.starbucks-list .delNum image{
+    width: 38rpx;
+    height: 38rpx;
+}
+.starbucks-list .listNum{
+    position: absolute;
+    top: 65rpx;
+    right:90rpx;
+}
+.starbucks-list .listNum.out{
+    display: none;
+}
+
+.starbucks-list .xiabiao{
+    width: 50rpx;
+    height: 5rpx;
+    position: absolute;
+    background-color: #299e6d;
+    top: 115rpx;
+    right: 75rpx;
+}
+.starbucks-list .xiabiao.out{
+    display: none;
+}
+
+.starbucks-foot{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 155rpx;
+    background-color: rgb(243, 243, 243);
+}
+
+.starbucks-foot::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2rpx;
+    background-color: #e1e1e1;
+    top: 0rpx;
+    left: 0rpx;
+}
+.starbucks-foot .number{
+    position: absolute;
+    font-size: 25rpx;
+    color: #c3c3c3;
+    top: 20rpx;
+    left: 65rpx;
+}
+
+.starbucks-foot .money{
+    position: absolute;
+    top: 60rpx;
+    left: 55rpx;
+    font-size: 30rpx;
+}
+
+.starbucks-foot .buy{
+    appearance: none;
+    width: 196rpx;
+    height: 68rpx;
+    background-color: #4aa668;
+    border-radius: 34rpx;
+    line-height: 68rpx;
+    color: #fff;
+    position: absolute;
+    top: 20rpx;
+    right: 50rpx;
+}
+
+.starbucks-foot .buy::after{
+    border: none;
+}
+.makeknow{
+    width: 100%;
+    height: 150rpx;
+    /* display: inline-block; */
+    position: relative;
+    /* background-color: red; */
+}
+
+navigator{
+    height:auto;
+    width:150rpx;
+    display:block;
+}
+.makeknow text{
+    font-size: 25rpx;
+    color: #299e6d;
+    text-decoration: underline;
+}
+.makeknow .make{
+    position: absolute;
+    top: 55rpx;
+    left: 240rpx;
+}
+
+.makeknow .know{
+    position: absolute;
+    top: 55rpx;
+    right: 240rpx;
+}
+.dianzi{
+    width: 100%;
+    height: 155rpx;
+    background-color: #f7f7f7
+}
