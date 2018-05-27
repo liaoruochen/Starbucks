@@ -1,6 +1,7 @@
 
 .starbucks-container{
     /* background-color: red; */
+    width: 100%;
     overflow: hidden;
 }
 .title-pic{
@@ -107,6 +108,11 @@
     position: absolute;
     top: 70rpx;
     right:20rpx ;
+    border-radius: 50%;
+}
+.starbucks-list .addNum image{
+    width: 38rpx;
+    height: 38rpx;
 }
 .starbucks-list .delNum{
     width: 38rpx;
@@ -114,11 +120,36 @@
     position: absolute;
     top: 70rpx;
     right:140rpx;
+    border-radius: 50%;
 }
-.starbucks-list .lisrNum{
+.starbucks-list .delNum.out{
+    display: none;
+}
+
+
+.starbucks-list .delNum image{
+    width: 38rpx;
+    height: 38rpx;
+}
+.starbucks-list .listNum{
     position: absolute;
     top: 65rpx;
     right:90rpx;
+}
+.starbucks-list .listNum.out{
+    display: none;
+}
+
+.starbucks-list .xiabiao{
+    width: 50rpx;
+    height: 5rpx;
+    position: absolute;
+    background-color: #299e6d;
+    top: 115rpx;
+    right: 75rpx;
+}
+.starbucks-list .xiabiao.out{
+    display: none;
 }
 
 .starbucks-foot{
@@ -126,7 +157,7 @@
     bottom: 0;
     width: 100%;
     height: 155rpx;
-    background-color: #f7f7f7;
+    background-color: rgb(243, 243, 243);
 }
 
 .starbucks-foot::after{
@@ -157,10 +188,10 @@
     appearance: none;
     width: 196rpx;
     height: 68rpx;
-    background-color: #f0f0f0;
+    background-color: #4aa668;
     border-radius: 34rpx;
     line-height: 68rpx;
-    color: #5a5959;
+    color: #fff;
     position: absolute;
     top: 20rpx;
     right: 50rpx;
@@ -203,3 +234,140 @@ navigator{
     height: 155rpx;
     background-color: #f7f7f7
 }
+
+.introduce{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgba(0,0,0,0.4);
+
+    
+}
+
+.introduce .jspic{
+    height: 300rpx;
+    width:300rpx;
+    border-radius: 50%;
+    background: #fff;
+    position: fixed;
+    bottom: 600rpx;
+    left: 230rpx;
+    z-index: 100;
+}
+.jspic image{
+    height: 300rpx;
+    width: 300rpx;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+
+
+.introduce .jieshao{
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    height: 750rpx;
+}
+
+.dianzi{
+    width: 100%;
+    height: 200rpx;
+    background-color: #fff;
+    z-index: 100;
+    position: fixed;
+}
+
+.introduce-box{
+    height: 560rpx;
+    position: fixed;
+    background-color: #fff;
+    bottom: 0;
+}
+
+.introduce .thename{
+    display: block;
+    padding: 0rpx 30rpx 0;
+
+}
+.introduce .themoney{
+    display: block;
+    padding: 20rpx 20rpx 0;
+}
+
+.introduce .themoney:after{
+  content: "";
+  position: absolute;
+  width: 710rpx;
+  height: 2rpx;
+  background-color: #e1e1e1;
+  top: 90rpx;
+  left: 20rpx;
+
+}
+
+.introduce .thedoor{
+    display: block;
+    padding: 60rpx 40rpx 0;
+    font-size: 26rpx;
+    color: #dadada;
+}
+
+.introduce .thedoor .all{
+    font-size: 26rpx;
+    color: #4aa668;
+    
+}
+
+.introduce .thetime{
+    display: block;
+    padding: 20rpx 40rpx 0;
+    font-size: 26rpx;
+    color: #dadada;
+}
+
+.introduce .thetime .time{
+    font-size: 26rpx;
+    color: #000;
+    
+}
+
+.introduce .make-box{
+    display: flex
+}
+
+.introduce .themake{
+    padding: 20rpx 40rpx 0;
+    font-size: 26rpx;
+    line-height: 26rpx;
+    color: #dadada;
+    height: 100%;
+    padding-right: 0rpx;
+    /* background-color: red; */
+}
+
+.introduce .make-box .make{
+    padding: 16rpx 40rpx 0;
+    padding-left: 0rpx;
+    flex: 1;
+    color: #000;
+    font-size: 26rpx;
+    /* background-color: red; */
+}
+
+.introduce .cha{
+    width: 38rpx;
+    height: 38rpx;
+    position: fixed;
+    z-index: 100;
+    top: 730rpx;
+    left: 30rpx;
+}
+
+.introduce.out{
+    display: none;
+}
+
