@@ -5,30 +5,53 @@ const app = getApp()
 Page({
   data: {
     picture:[
-      {url:"/images/kv-bev.jpg"},
-      {url:"/images/kv-dumpling.jpg"},
+      {url:"/images/ff.jpg",page:"1"},
+      {url:"/images/kv-dumpling.jpg",page:"8"},
     ],
     newTitle:"星冰粽沁甜上市",
     newImage:"/images/wml.png",
     bzimg:'/images/kele.png',
-    List:[
-      {id:0,img:"/images/kv-bev.jpg",title:"这一刻夏天"},
-      {id:1,img:"/images/a.png",title:"告白TA"},
-      {id:2,img:"/images/kv-dumpling.jpg",title:"冰沁清甜夏天见"},
-      {id:3,img:"/images/d.png",title:"勇敢爱"},
-      {id:4,img:"/images/c.png",title:"加油"},
-      {id:5,img:"/images/e.png",title:"放松片刻"},
-      {id:6,img:"/images/f.png",title:"有你真好"},
-      {id:7,img:"/images/b.png",title:"生快"},
-    ]
+    List:[]
   }
   ,
   shoppingCart(e){
-    let id = e.currentTarget.dataset.id;
-    console.log(id)
-    // wx.navigateTo({
-    //   url: '../../pages/shopping/shopping'
-    // })
+    let page = e.currentTarget.dataset.page;
+    // console.log(page)
+    wx.navigateTo({
+      url:`/pages/shopping/shopping?page=${page}`
+    })
+
+  },
+  imageto(e){
+    let page = e.currentTarget.dataset.page;
+    if(page=="8"){
+      wx.navigateTo({
+        url:"/pages/push/push?page"
+      })
+  
+    }
+    wx.navigateTo({
+      url:`/pages/shopping/shopping?page=${page}`
+    })
+
+   
+  },
+  buttonTo(e){
+    wx.navigateTo({
+      url:`/pages/push/push`
+    })
+  },
+  onReady:function(){
+    wx.request({
+      url:'https://www.easy-mock.com/mock/5adecfefc57e6f08ff16594b/example/starbucks',
+      success:(res)=>{
+        // console.log(res)
+        this.setData({
+          List:res.data.data.List
+        })
+      }
+    })
+
   }
   //事件处理函数
  

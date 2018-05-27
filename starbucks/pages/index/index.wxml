@@ -1,22 +1,22 @@
 <scroll-view scroll-y class="starbucks-container">
   <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="1000" circular="true">
-    <block wx:for="{{picture}}" wx:for-index="index" wx:key="{{index}}">
+    <block wx:for="{{picture}}"  wx:for-index="index" wx:key="{{index}}">
       <swiper-item>
-        <image src="{{item.url}}" class="slide-image" />
+        <image src="{{item.url}}" data-page="{{item.page}}" class="slide-image" bindtap="imageto" />
       </swiper-item>
     </block>
   </swiper>
-  <button class="starbucks-btn">
-    <image class="newImage" src="{{newImage}}" />
-    <text>{{newTitle}}</text>
-  </button>
+    <button class="starbucks-btn" bindtap="buttonTo">
+      <image class="newImage" src="{{newImage}}" />
+      <text>{{newTitle}}</text>
+    </button>
   <text class="title">咖啡+祝福 即刻表心意</text>
   <scroll-view class="sbList">
-    <view class="starbucks-list" wx:for="{{List}}" data-id="{{item.id}}" wx:key="{{item.id}}" bindtap="shoppingCart">
-      <navigator hover-class="none" url="../../pages/shopping/shopping">
+    <view class="starbucks-list" wx:for="{{List}}" data-page="{{item.page}}" wx:key="{{item.page}}" bindtap="shoppingCart">
+    
         <image src="{{item.img}}" />
         <text>{{item.title}}</text>
-      </navigator>
+     
     </view>
   </scroll-view>
   <view class="starbucks-foot">
