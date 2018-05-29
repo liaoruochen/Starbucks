@@ -1,6 +1,7 @@
 
 .starbucks-container{
     /* background-color: red; */
+    height: 100vh;
     width: 100%;
     overflow: hidden;
 }
@@ -165,7 +166,7 @@
     bottom: 0;
     width: 100%;
     height: 155rpx;
-    background-color: rgb(243, 243, 243);
+    background-color: #fff;
 }
 
 .starbucks-foot::after{
@@ -242,3 +243,165 @@ navigator{
     height: 155rpx;
     background-color: #f7f7f7
 }
+.introduce{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgba(0,0,0,0.4);
+
+    
+}
+
+.introduce .jspic{
+    height: 300rpx;
+    width:300rpx;
+    border-radius: 50%;
+    background: #fff;
+    position: fixed;
+    bottom: 600rpx;
+    left: 230rpx;
+    z-index: 100;
+}
+.jspic image{
+    height: 300rpx;
+    width: 300rpx;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+
+
+.introduce .jieshao{
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    height: 750rpx;
+    width: 100%;
+}
+
+.dianzi2{
+    width: 100%;
+    height: 190rpx;
+    background-color: #fff;
+    z-index: 100;
+    position: fixed;
+    top: 700rpx;
+}
+
+.introduce-box{
+    height: 560rpx;
+    position: fixed;
+    background-color: #fff;
+    bottom: 0;
+}
+
+.introduce .thename{
+    display: block;
+    padding: 0rpx 30rpx 0;
+
+}
+.introduce .themoney{
+    display: block;
+    padding: 20rpx 20rpx 0;
+}
+
+.introduce .themoney:after{
+  content: "";
+  position: absolute;
+  width: 710rpx;
+  height: 2rpx;
+  background-color: #e1e1e1;
+  top: 130rpx;
+  left: 20rpx;
+
+}
+
+.introduce .thedoor{
+    display: block;
+    padding: 60rpx 40rpx 0;
+    font-size: 26rpx;
+    color: #dadada;
+}
+
+.introduce .thedoor .all{
+    font-size: 26rpx;
+    color: #4aa668;
+    
+}
+
+.introduce .thetime{
+    display: block;
+    padding: 45rpx 40rpx 0;
+    font-size: 26rpx;
+    color: #dadada;
+}
+
+.introduce .thetime .time{
+    font-size: 26rpx;
+    color: #000;
+    
+}
+
+.introduce .make-box{
+    display: flex
+}
+
+.introduce .themake{
+    padding: 55rpx 40rpx 0;
+    font-size: 26rpx;
+    line-height: 26rpx;
+    color: #dadada;
+    height: 100%;
+    padding-right: 0rpx;
+    /* background-color: red; */
+}
+
+.introduce .make-box .make{
+    padding: 16rpx 40rpx 0;
+    padding-left: 0rpx;
+    /* padding-top:0; */
+    flex: 1;
+    color: #000;
+    font-size: 26rpx;
+    
+    /* background-color: red; */
+}
+
+.introduce .cha{
+    width: 38rpx;
+    height: 38rpx;
+    position: relative;
+    z-index: 120;
+    top: 30rpx;
+    left: 30rpx;
+}
+
+.introduce.out{
+    display: none;
+}
+
+.introduce .dianzi3{
+    padding-top: 30rpx;
+    width: 750rpx;
+    height: 10rpx;
+    background-color: #fff;
+    z-index:98;
+    position: fixed;
+    bottom: 0;
+}
+
+.introduce .dianzi4{
+    width: 750rpx;
+    height: 50rpx;
+    background-color: #fff;
+}
+
+.introduce .chaxxx{
+    width: 100%;
+    height: 700rpx;
+    /* background-color: red; */
+}
+
