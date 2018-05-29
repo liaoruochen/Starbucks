@@ -1,8 +1,8 @@
-<scroll-view scroll-y class="starbucks-container">
+<scroll-view scroll-y="{{scrolly}}" class="starbucks-container">
     <view class="title-pic">
         <image src="{{titlePic}}" />
     </view>
-    <scroll-view scroll-x="true" class="list-pic">
+    <scroll-view scroll-x="{{scrollx}}" class="list-pic">
         <view class="picture" wx:for="{{listPic}}" wx:key="{{index}}">
             <image class="{{id==item.id?'check':''}}" data-id="{{item.id}}" data-url="{{item.url}}" src="{{item.url}}" bindtap="showChoose"
             />
@@ -13,8 +13,8 @@
 
     <text class="choice">选择商品</text>
 
-    <scroll-view class="starbucks-list" wx:for="{{starbucksList}}" wx:key="{{index}}">
-        <image bindtap="checkDrink" class="drinkImg" src="{{item.url}}" />
+    <view  class="starbucks-list" wx:for="{{starbucksList}}" wx:key="{{index}}">
+        <image bindtap="checkDrink" data-imgnum="{{item.imgnum}}" class="drinkImg" src="{{item.url}}" />
         <text class="description">{{item.name}}</text>
         <text class="price">￥{{item.price}}</text>
 
@@ -31,13 +31,8 @@
         <text wx:if="{{item.status==status  || item.num!=0 }}" class="listNum {{item.num==0?'out':''}}">{{starbucksList[index].num}}</text>
 
         <view wx:if="{{item.status==status  || item.num!=0 }}" class="xiabiao {{item.num==0?'out':''}}"></view>
-    </scroll-view>
-
-    <view class="starbucks-foot">
-        <text class="number">{{number}}份礼品</text>
-        <text class="money">￥{{money}}.00</text>
-        <button class="buy" disabled="{{disabled}}" bindtap="buySomething">购买</button>
     </view>
+
 
     <view class="makeknow">
         <navigator hover-class="none" url="../../pages/make/make">
@@ -50,38 +45,39 @@
     </view>
     <view class="dianzi"></view>
 
+    <view class="starbucks-foot">
+        <text class="number">{{number}}份礼品</text>
+        <text class="money">￥{{money}}.00</text>
+        <button class="buy" disabled="{{disabled}}" bindtap="buySomething">购买</button>
+    </view>
+
+
+
+
     <view class="introduce {{checkxx?'out':''}}">
-        <image class="cha" bindtap="chaxx" src='../../images/cha.png'/>
+        <view class="chaxxx" bindtap="chaxx"></view>
         <view class="jspic">
-            <image src="../../images/6.png" />
+            <image src="{{picimg}}" />
         </view>
         <view scroll-y class="jieshao">
-            <view class="dianzi"></view>
+            
+            <!-- <view class="dianzi2"> -->
+                <image class="cha" bindtap="chaxx"  src='../../images/cha.png'/>
+            <!-- </view> -->
             <scroll-view scroll-y class="introduce-box" data-index="{{index}}">
-                <text class="thename">{{introduce[index].name}}</text>
-                <text class="themoney">￥40</text>
+                <text class="thename">{{thename}}</text>
+                <text class="themoney">￥{{themoney}}</text>
                 <text class="thedoor">适用门店：<text class="all">查看全部门店</text></text>
-                <text class="thetime">可用时段：<text class="time">2018.05.36-2021.05.25</text></text>
+                <text class="thetime">可用时段：<text class="time">{{thetime}}</text></text>
                 <view class="make-box">
                     <text class="themake">使用须知：</text>
-                    <text class="make">是数据库返回开啥会付款就撒谎尽快发啥看机会饭卡上
-                        附属卡减肥哈看就是发卡试试
-                        身份卡就是发卡就是看
-                        会说客家话是快捷回复卡是否开始
-                        附属卡减肥哈看就是发卡试试
-                        身份卡就是发卡就是看
-                        会说客家话是快捷回复卡是否开始
-                        附属卡减肥哈看就是发卡试试
-                        身份卡就是发卡就是看
-                        会说客家话是快捷回复卡是否开始
-                        附属卡减肥哈看就是发卡试试
-                        身份卡就是发卡就是看
-                        会说客家话是快捷回复卡是否开始
+                    <text class="make">
+                        {{themake}}
                     </text>
                 </view>
-
-
+                <scroll-view class="dianzi4"></scroll-view>
             </scroll-view>
+            <view class="dianzi3"></view>
         </view>
 
     </view>

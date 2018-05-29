@@ -1,8 +1,9 @@
 
 .starbucks-container{
     /* background-color: red; */
+    height: 100vh;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .title-pic{
     width: 452rpx;
@@ -29,6 +30,7 @@
     display: flex;
     margin-left: 40rpx;
     margin-top: 45rpx;
+    overflow: hidden;
   
 }
 
@@ -157,7 +159,7 @@
     bottom: 0;
     width: 100%;
     height: 155rpx;
-    background-color: rgb(243, 243, 243);
+    background-color: #fff;
 }
 
 .starbucks-foot::after{
@@ -236,7 +238,7 @@ navigator{
 }
 
 .introduce{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -271,18 +273,20 @@ navigator{
     position: fixed;
     bottom: 0;
     height: 750rpx;
+    width: 100%;
 }
 
-.dianzi{
+.dianzi2{
     width: 100%;
-    height: 200rpx;
+    height: 190rpx;
     background-color: #fff;
     z-index: 100;
     position: fixed;
+    top: 700rpx;
 }
 
 .introduce-box{
-    height: 560rpx;
+    height: 564rpx;
     position: fixed;
     background-color: #fff;
     bottom: 0;
@@ -304,7 +308,7 @@ navigator{
   width: 710rpx;
   height: 2rpx;
   background-color: #e1e1e1;
-  top: 90rpx;
+  top: 130rpx;
   left: 20rpx;
 
 }
@@ -324,7 +328,7 @@ navigator{
 
 .introduce .thetime{
     display: block;
-    padding: 20rpx 40rpx 0;
+    padding: 45rpx 40rpx 0;
     font-size: 26rpx;
     color: #dadada;
 }
@@ -340,7 +344,7 @@ navigator{
 }
 
 .introduce .themake{
-    padding: 20rpx 40rpx 0;
+    padding: 55rpx 40rpx 0;
     font-size: 26rpx;
     line-height: 26rpx;
     color: #dadada;
@@ -352,22 +356,45 @@ navigator{
 .introduce .make-box .make{
     padding: 16rpx 40rpx 0;
     padding-left: 0rpx;
+    /* padding-top:0; */
     flex: 1;
     color: #000;
     font-size: 26rpx;
+    
     /* background-color: red; */
 }
 
 .introduce .cha{
     width: 38rpx;
     height: 38rpx;
-    position: fixed;
-    z-index: 100;
-    top: 730rpx;
+    position: relative;
+    z-index: 120;
+    top: 30rpx;
     left: 30rpx;
+}
+
+.introduce .chaxxx{
+    width: 100%;
+    height: 700rpx;
+    /* background-color: red; */
 }
 
 .introduce.out{
     display: none;
 }
 
+.introduce .dianzi3{
+    padding-top: 30rpx;
+    width: 750rpx;
+    height: 10rpx;
+    background-color: #fff;
+    z-index:98;
+    position: fixed;
+    bottom: 0;
+}
+
+.introduce .dianzi4{
+    width: 750rpx;
+    height: 50rpx;
+    background-color: #fff;
+}
