@@ -13,7 +13,7 @@
 
     <text class="choice">选择商品</text>
 
-    <view  class="starbucks-list" wx:for="{{starbucksList}}" wx:key="{{index}}">
+    <view class="starbucks-list" wx:for="{{starbucksList}}" wx:key="{{index}}">
         <image bindtap="checkDrink" data-imgnum="{{item.imgnum}}" class="drinkImg" src="{{item.url}}" />
         <text class="description">{{item.name}}</text>
         <text class="price">￥{{item.price}}</text>
@@ -60,15 +60,19 @@
             <image src="{{picimg}}" />
         </view>
         <view scroll-y class="jieshao">
-            
+
             <!-- <view class="dianzi2"> -->
-                <image class="cha" bindtap="chaxx"  src='../../images/cha.png'/>
+            <image class="cha" bindtap="chaxx" src='../../images/cha.png' />
             <!-- </view> -->
             <scroll-view scroll-y class="introduce-box" data-index="{{index}}">
                 <text class="thename">{{thename}}</text>
                 <text class="themoney">￥{{themoney}}</text>
-                <text class="thedoor">适用门店：<text class="all">查看全部门店</text></text>
-                <text class="thetime">可用时段：<text class="time">{{thetime}}</text></text>
+                <view class="thedoor">适用门店：
+                    <text class="all" bindtap="moredoors">查看全部门店</text>
+                </view>
+                <view class="thetime">可用时段：
+                    <text class="time">{{thetime}}</text>
+                </view>
                 <view class="make-box">
                     <text class="themake">使用须知：</text>
                     <text class="make">

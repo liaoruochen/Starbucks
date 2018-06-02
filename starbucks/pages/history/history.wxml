@@ -1,2 +1,13 @@
 <!--pages/history/history.wxml-->
-<text>pages/history/history.wxml</text>
+<scroll-view scroll-y class="container">
+    <view wx:if="{{hasHistory}}" class="historyList" wx:for="{{historyList}}" wx:key="{{index}}">
+        <image src="{{item.url}}" />
+        <text class="name">{{item.name}}</text>
+        <text class="num">购买数量： {{item.num}}</text>
+        <text class="price">单价： ￥{{item.price}}</text>
+    </view>
+
+    <view wx:if="{{!hasHistory}}" class="nothing">
+        <text>当前还没有购买记录</text>
+    </view>
+</scroll-view>

@@ -21,10 +21,11 @@ Page({
     id:1,
     status:0,
     checkxx:true,
-    scrolly:true,
     scrollx:true,
+    scrolly:true,
     goupic:'/images/gou.png'
     ,
+    array:[],
     listPic:[],
     starbucksList:[],
     introduce:[
@@ -54,30 +55,49 @@ Page({
     })
   },
   addNumber(e){
-
+    // console.log(e)
     let money = this.data.money;
-    
-
     let number = this.data.number;
     const index = e.currentTarget.dataset.index;
+    // console.log(index)
     const status = e.currentTarget.dataset.status;
     let price = Number(this.data.starbucksList[index].price);
     let starbucksList = this.data.starbucksList;
     let num = Number(this.data.starbucksList[index].num) ;
+    let url = this.data.starbucksList[index].url
+    let name = this.data.starbucksList[index].name
     num++;
     number++;
     this.data.starbucksList[index].num=num
     money+=price
+
+    const shuju={num,price,url,name}
+    const array= this.data.array;
+    array[index]=shuju
+    
+
+    wx.setStorage({
+      key: 'key',
+      data: array,
+      success: function(res) {
+        // console.log(res)
+      }
+    })
+
+
+    // console.log(status)
    
     // console.log(this.data.starbucksList[index].num)
     // starbucksList
     
     this.setData({
+      array,
       status,
       starbucksList,
       number,
       money:money
     })
+    console.log(array)
     this.hasNumber();
     // console.log(starbucksList)
   },
@@ -86,23 +106,43 @@ Page({
     let number = this.data.number;
     const index = e.currentTarget.dataset.index;
     const status = e.currentTarget.dataset.status;
-    let price = this.data.starbucksList[index].price;
+    let price = Number(this.data.starbucksList[index].price);
     let starbucksList = this.data.starbucksList;
-    let num = this.data.starbucksList[index].num;
+    let num = Number(this.data.starbucksList[index].num) ;
+    let url = this.data.starbucksList[index].url
+    let name = this.data.starbucksList[index].name
     num--;
     number--;
     this.data.starbucksList[index].num=num
     money= money-price
     
+    const shuju={num,price,url,name}
+    const array= this.data.array;
+    array[index]=shuju
+
+    if(num==0){
+       array.splice(index,1,null)
+    }
+
+    wx.setStorage({
+      key: "key",
+      data: array,
+      success: function(res) {
+        // console.log(res)
+      }
+    })
+
+    
     // console.log(this.data.starbucksList[index].num)
     // starbucksList  
     this.setData({
+      array,
       status,
       starbucksList,
       number,
       money:money
-
     })
+    console.log(array)
     this.hasNumber();
   },
   hasNumber(){
@@ -121,13 +161,14 @@ Page({
     }
   },
   buySomething(e){
+    // console.log(e)
     wx.showToast({
       title: '购买成功',
       icon: 'success',
       duration: 2000
     })
     setTimeout(function(){
-      wx.navigateTo({
+      wx.redirectTo({
         url:"../history/history"
       })
     },1500)
@@ -137,7 +178,7 @@ Page({
     wx.request({
       url:'https://www.easy-mock.com/mock/5adecfefc57e6f08ff16594b/example/starbucks',
       success:(res)=>{
-        console.log(res)
+        // console.log(res)
         const imgnum = e.currentTarget.dataset.imgnum;
         // console.log(imgnum)
         const picimg = res.data.data.starbucksList[imgnum].url;
@@ -177,12 +218,19 @@ Page({
       scrollx:true,
     })
   },
+  moredoors(e){
+    // console.log('111')
+    wx.navigateTo({
+      url:'../../pages/moredoors/moredoors'
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     const page = options.page;
+    // console.log(options)
     wx.request({
       url:'https://www.easy-mock.com/mock/5adecfefc57e6f08ff16594b/example/starbucks',
       success:(res)=>{
@@ -210,21 +258,23 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+ 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
+ 
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+ 
   },
 
   /**

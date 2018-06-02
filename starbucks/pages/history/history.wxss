@@ -1,1 +1,64 @@
 /* pages/history/history.wxss */
+
+.container{
+    overflow: hidden;
+}
+
+.historyList{
+    height: 200rpx;
+    width: 700rpx;
+    margin: 0 auto;
+    border-color: red;
+    position: relative;
+    margin-top: 80rpx;
+    /* margin-bottom: 60rpx; */
+}
+.historyList image{
+    width: 120rpx;
+    height: 146rpx;
+    position: absolute;
+    top: 27rpx;
+    left: 20rpx;
+}
+.historyList .name{
+   display: block;
+   text-align: center;
+   font-size: 35rpx;
+
+}
+.historyList .num{
+    font-size: 26rpx;
+    position: absolute;
+    bottom: 40rpx;
+    right:20rpx;
+}
+.historyList .price{
+    font-size: 26rpx;
+    position: absolute;
+    bottom: 40rpx;
+    left: 272rpx;
+    /* left: 20rpx; */
+}
+
+.historyList::after{
+    content: '';
+    position: absolute;
+    bottom: 0rpx;
+    left: 0rpx;
+    height: 1rpx;
+    width: 700rpx;
+    background-color: #e1e1e1;
+}
+.nothing{
+    width: 100%;
+    height: 300rpx;
+    /* background-color: red; */
+}
+
+.nothing text{
+    font-size: 26rpx;
+    display: block;
+    /* margin: 0 auto; */
+    text-align: center;
+    padding-top: 130rpx;
+}
