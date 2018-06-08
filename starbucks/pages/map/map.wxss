@@ -1,0 +1,111 @@
+/* pages/map/map.wxss */
+.container{
+    overflow: hidden;
+    height: 100vh;
+}
+.footbar{
+    width: 100%;
+    height: 15vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center
+}
+
+.footbar .address{
+    width: 70%;
+    height: 100%;
+    flex: 1;
+}
+.footbar .add{
+    padding-left: 40rpx;
+    padding-top: 50rpx;
+    font-size: 38rpx;
+}
+.footbar .ress{
+    margin-left: 40rpx;
+    padding: 0;
+}
+.footbar text{
+    font-size: 24rpx;
+    color: #888888;
+}
+.footbar image{
+    width: 100rpx;
+    height: 100rpx;
+    padding-right: 40rpx;
+    margin-left: 30rpx;
+}
+
+.pop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+
+.pop .back{
+    height: 60vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* background-color: red; */
+}
+
+.pop-list{
+    height: 40vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.pop-list .list{
+    width: 100%;
+    height: 7.666667vh;
+    /* padding-top: 15rpx; */
+    position: relative;
+    font-size: 38rpx;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 27rpx;
+    /* background-color: green; */
+}
+
+.pop-list .cover{
+    height: 2rpx;
+    width: 100%;
+    background-color: #eff0f0;
+    position: absolute;
+    bottom: 0rpx;
+    left: 0rpx;
+    z-index: 999;
+}
+
+.pop-list .bigcover{
+    height: 10rpx;
+    width: 100%;
+    background-color: #eff0f0;
+    position: absolute;
+    bottom: 0rpx;
+    left: 0rpx;
+    z-index: 999;
+}
+
+.pop-list .return{
+    width: 100%;
+    height: 9.333333vh;
+    text-align: center;
+    /* background-color: red; */
+    padding-top: 30rpx;
+    font-size: 38rpx;
+}
+
