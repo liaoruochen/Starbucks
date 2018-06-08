@@ -10,7 +10,16 @@ Page({
   data: {
     starbucksDoors: [],
   },
-
+  map(e){
+    const id = e.currentTarget.dataset.id;
+    // console.log(id)
+    wx.navigateTo({
+      url:`../../pages/map/map?id=${id}`
+    })
+  
+    
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -21,14 +30,37 @@ Page({
 
     qqmapsdk.search({
       keyword: '星巴克',
+      address_format:'short',
+      page_size: 20,
       success: (res) => {
-        console.log(res);
-        const starbucksDoors =  this.data.starbucksDoors
+        // console.log(res);
+        const starbucksDoors = this.data.starbucksDoors
         // console.log(this)
         this.setData({
-          starbucksDoors:res.data
+          starbucksDoors: res.data
         })
-        // console.log(this.data.starbucksDoors);
+        
+        for(let i =0;i<this.data.starbucksDoors.length;i++){
+          // console.log(res.data[i]._distance);
+        }
+        
+      },
+      fail: function (res) {
+        // console.log(res);
+      },
+      complete: function (res) {
+        // console.log(res);
+      }
+
+    });
+
+    qqmapsdk.calculateDistance({
+      to: [{
+        latitude: 28.689578,
+        longitude: 115.89352755
+      }],
+      success: function (res) {
+        // console.log(res);
       },
       fail: function (res) {
         // console.log(res);
@@ -37,8 +69,24 @@ Page({
         // console.log(res);
       }
     });
+
+      // for(let i =0;i<10;i++){
+      //   qqmapsdk.geocoder({
+      //     address: '北京市海淀区彩和坊路海淀西大街74号',
+      //     success: function (res) {
+      //       console.log(res);
+      //     },
+      //     fail: function (res) {
+      //       // console.log(res);
+      //     },
+      //     complete: function (res) {
+      //       // console.log(res);
+      //     }
+      //   });
+      // }
+  
+
     
-   
   },
 
   /**
@@ -53,7 +101,7 @@ Page({
    */
   onShow: function () {
 
-   
+
   },
 
   /**

@@ -1,10 +1,18 @@
-<view class="prompt">
-    <text>仅显示离你最近的30家门店</text>
-</view>
-
-<scroll-view class="starbucksdoors" wx:for="{{starbucksDoors}}" wx:key="{{index}}">
-    <view class="address">
-        <text>{{item.title}}</text>
-        <text>{{item.address}}</text>
+<scroll-view class="container">
+    <view class="prompt">
+        <text>仅显示离你最近的30家门店</text>
     </view>
+
+    <scroll-view class="box">
+        <scroll-view class="starbucksdoors" wx:for="{{starbucksDoors}}"  wx:key="{{index}}">
+            <view class="add">
+                <text class="title">{{item.title}}</text>
+                <view class="address">{{item.address}}</view>
+                <view class="distance">{{item._distance}}米</view>
+                <image bindtap='map' data-id="{{item.id}}" src="../../images/zuobiao.png"/>
+            </view>
+        </scroll-view>
+    </scroll-view>
+
+    
 </scroll-view>

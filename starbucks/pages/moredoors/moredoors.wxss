@@ -1,8 +1,80 @@
 
+.container{
+    overflow: hidden;
+    width: 100%;
+}
+.prompt{
+    margin-top: 20rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: #999999;
+    height: 80rpx;
+    position: relative;
+}
+.prompt::after{
+    content: '';
+    position: absolute;
+    height: 2rpx;
+    width: 730rpx;
+    background-color: #f3f3f3;
+    bottom: 20rpx;
+    right: 0rpx;
+  
+}
 
 .starbucksdoors{
     width: 100%;
-    height: 200rpx;
-    /* background-color: red; */
-    margin-bottom: 10rpx;
+    height: 120rpx;
+    position: relative;
+    margin-bottom: 20rpx;
+    
+}
+
+.starbucksdoors::before{
+    content: '';
+    position: absolute;
+    height: 110rpx;
+    width: 2rpx;
+    background-color: #f3f3f3;
+    right: 100rpx;
+    top: 0rpx;
+}
+
+.starbucksdoors::after{
+    content: '';
+    position: absolute;
+    height: 1rpx;
+    width: 730rpx;
+    background-color: #f3f3f3;
+    right: 0rpx;
+    top: 50prx;
+}
+
+.starbucksdoors .title{
+    font-size: 28rpx;
+    color: #000000;
+    display: block;
+    padding-left: 20rpx;
+}
+.starbucksdoors .address{
+    margin-top: 10rpx;
+    width: 400rpx;
+    font-size: 22rpx;
+    /* display: block; */
+    padding-left: 20rpx;
+    color: #999999;
+}
+.starbucksdoors .distance{
+    font-size: 22rpx;
+    color: #999999;
+    position: absolute;
+    right: 130rpx;
+    top: 50rpx;
+}
+.starbucksdoors image{
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    right: 25rpx;
+    top: 35rpx;
 }
