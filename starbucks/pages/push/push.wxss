@@ -38,7 +38,7 @@
     width: 230rpx;
     height: 140rpx;
     display: inline-block;
-    padding: 0 17rpx;
+    padding: 0 40rpx;
     border-radius: 10rpx;
    
 }
@@ -78,7 +78,7 @@
 .starbucks-list{
     
     width: 650rpx;
-    height: 215rpx;
+    height: 180rpx;
     /* background-color: red; */
     margin: 0 auto;
     position: relative;

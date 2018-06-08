@@ -172,7 +172,12 @@ Page({
       scrollx:true,
     })
   },
-
+  moredoors(e){
+    // console.log('111')
+    wx.navigateTo({
+      url:'../../pages/moredoors/moredoors'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
