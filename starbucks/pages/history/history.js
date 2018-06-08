@@ -9,6 +9,7 @@ Page({
     num: '',
     price: '',
     historyList: [],
+    history:[],
     hasHistory:false,
   },
 
@@ -22,7 +23,7 @@ Page({
       //获取数据的key
       key: "key",
       success: function (res) {
-        // console.log(res.data)
+        // console.log(res)
         for (let i = 0; i < res.data.length; i++) {
           historyList[i] = res.data[i]
         }
@@ -31,20 +32,44 @@ Page({
             historyList.splice(i, 1);
             i = i - 1; // i - 1 ,因为空元素在数组下标 2 位置，删除空之后，后面的元素要向前补位，
             // 这样才能真正去掉空元素,觉得这句可以删掉的连续为空试试，然后思考其中逻辑
-
-            console.log(historyList);
+            // console.log(historyList);
           }
         }
-        const hasHistory = that.data.hasHistory
+       
         that.setData({
           historyList,
           hasHistory:true,
         })       
-        // console.log(historyList)
+      
       }
     })
     
+
+    // let history = that.data.history;
+    // history = history.concat(historyList)
     
+    // wx.setStorage({
+    //   key: "history",
+    //   data: history,
+    //   success: function(res) {
+    //     // console.log(res)
+    //   }
+    // })
+
+    // wx.getStorage({
+    //   key:'history',
+    //   success:(res)=>{
+    //     console.log(res)
+    //   }
+    // })
+
+    
+    const hasHistory =that.data.hasHistory
+    if(!hasHistory){
+      that.setData({
+        hasHistory:false
+      })
+    }
     
   },
 
