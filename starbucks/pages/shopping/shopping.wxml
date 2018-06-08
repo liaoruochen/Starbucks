@@ -2,6 +2,7 @@
     <view class="title-pic">
         <image src="{{titlePic}}" />
     </view>
+    
     <scroll-view scroll-x="{{scrollx}}" class="list-pic">
         <view class="picture" wx:for="{{listPic}}" wx:key="{{index}}">
             <image class="{{id==item.id?'check':''}}" data-id="{{item.id}}" data-url="{{item.url}}" src="{{item.url}}" bindtap="showChoose"
@@ -20,17 +21,17 @@
 
         <view class="addNum" bindtap="addNumber" data-index="{{index}}" data-status="{{item.status}}">
 
-            <image wx:if="{{(item.status==status && item.num!=0)||item.num!=0}}" src="{{delNum1}}" />
+            <image wx:if="{{item.num!=0}}" src="{{delNum1}}" />
             <image wx:else="" src="{{addNum}}" />
         </view>
-        <view wx:if="{{item.status==status || item.num!=0 }}" data-index="{{index}}" class="delNum {{item.num==0?'out':''}}" bindtap="delNumber"
+        <view wx:if="{{item.num!=0 }}" data-index="{{index}}" class="delNum {{item.num==0?'out':''}}" bindtap="delNumber"
             data-status="{{item.status}}">
             <image src="{{delNum}}" />
         </view>
 
-        <text wx:if="{{item.status==status  || item.num!=0 }}" class="listNum {{item.num==0?'out':''}}">{{starbucksList[index].num}}</text>
+        <text wx:if="{{item.num!=0 }}" class="listNum {{item.num==0?'out':''}}">{{starbucksList[index].num}}</text>
 
-        <view wx:if="{{item.status==status  || item.num!=0 }}" class="xiabiao {{item.num==0?'out':''}}"></view>
+        <view wx:if="{{item.num!=0 }}" class="xiabiao {{item.num==0?'out':''}}"></view>
     </view>
 
 

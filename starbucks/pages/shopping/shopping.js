@@ -45,7 +45,6 @@ Page({
 
   },
   showChoose(e){
-    console.log(e)
     const id = e.currentTarget.dataset.id;
     const url = e.currentTarget.dataset.url;
     // console.log(e)
@@ -55,11 +54,9 @@ Page({
     })
   },
   addNumber(e){
-    // console.log(e)
     let money = this.data.money;
     let number = this.data.number;
     const index = e.currentTarget.dataset.index;
-    // console.log(index)
     const status = e.currentTarget.dataset.status;
     let price = Number(this.data.starbucksList[index].price);
     let starbucksList = this.data.starbucksList;
@@ -70,26 +67,15 @@ Page({
     number++;
     this.data.starbucksList[index].num=num
     money+=price
-
     const shuju={num,price,url,name}
     const array= this.data.array;
     array[index]=shuju
-    
-
     wx.setStorage({
       key: 'key',
       data: array,
       success: function(res) {
-        // console.log(res)
       }
     })
-
-
-    // console.log(status)
-   
-    // console.log(this.data.starbucksList[index].num)
-    // starbucksList
-    
     this.setData({
       array,
       status,
@@ -99,7 +85,6 @@ Page({
     })
     console.log(array)
     this.hasNumber();
-    // console.log(starbucksList)
   },
   delNumber(e){
     let money = this.data.money;
@@ -234,13 +219,18 @@ Page({
     wx.request({
       url:'https://www.easy-mock.com/mock/5adecfefc57e6f08ff16594b/example/starbucks',
       success:(res)=>{
-        console.log(res)
+        
         const listPic =  res.data.data.listPic
         // console.log(listPic[page])
         this.setData({
           listPic:res.data.data.listPic[page].pagelist,
           starbucksList:res.data.data.starbucksList,
           titlePic:res.data.data.listPic[page].pagelist[0].url
+        })
+        console.log(res.data.data.List[page].title)
+        let title = res.data.data.List[page].title;
+        wx.setNavigationBarTitle({
+          title:title
         })
       }
     })
