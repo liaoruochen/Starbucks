@@ -16,11 +16,11 @@ Page({
   ,
   shoppingCart(e){
     let page = e.currentTarget.dataset.page;
-    // console.log(page)
+
     wx.navigateTo({
       url:`/pages/shopping/shopping?page=${page}`
     })
-
+   
   },
   imageto(e){
     let page = e.currentTarget.dataset.page;

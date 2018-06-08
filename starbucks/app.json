@@ -5,7 +5,10 @@
     "pages/history/history",
     "pages/shopping/shopping",
     "pages/make/make",
-    "pages/know/know"
+    "pages/know/know",
+    "pages/push/push",
+    "pages/moredoors/moredoors",
+    "pages/map/map"
   ],
   "window": {
     "backgroundTextStyle": "light",

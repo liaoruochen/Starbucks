@@ -93,8 +93,7 @@ button::after{
 
 .starbucks-foot{
   background-color: #f9f9f9;
-  margin-bottom: 60rpx;
-  height: 185rpx;
+  height: 245rpx;
   width: 100%;
 
  

@@ -11,14 +11,14 @@
       <text>{{newTitle}}</text>
     </button>
   <text class="title">咖啡+祝福 即刻表心意</text>
+  
   <scroll-view class="sbList">
-    <view class="starbucks-list" wx:for="{{List}}" data-page="{{item.page}}" wx:key="{{item.page}}" bindtap="shoppingCart">
-    
+    <view class="starbucks-list" wx:for="{{List}}" data-title="{{item.title}}"  data-page="{{item.page}}" wx:key="{{item.page}}" bindtap="shoppingCart">
         <image src="{{item.img}}" />
         <text>{{item.title}}</text>
-     
     </view>
   </scroll-view>
+
   <view class="starbucks-foot">
     <view class="cole-img">
       <navigator hover-class="none" url="../../pages/history/history">
